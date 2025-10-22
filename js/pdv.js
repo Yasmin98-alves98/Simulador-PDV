@@ -91,19 +91,21 @@ function adicionarProduto(id) {
             produtoExistente.preco * produtoExistente.quantidade;
     }
 
-    //Recarrega na tela os dados do cupom
+    //Recarrega na tela os dados do cupom e recalcula os totais
     carregarCupom();
+    atualizarTotais();
 }
 
-/*--------- Função para calcular total de vendas ------------- */
+/*-------- Função para calcular total das vendas --------*/
 
 function calcularTotalVendas() {
     let total = 0;
-    for (let i=0; i<cupom.length[i]; i++);
-    total += cupom[i].total;
+    for (let i=0; i<cupom.length; i++)
+        total += cupom[i].total;
 
     return total;
 }
+
 /*-------- Função para calcular descontos --------*/
 
 function calcularDesconto(valor) {
